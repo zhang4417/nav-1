@@ -124,11 +124,26 @@ var x = localStorage.getItem('x'); //提取数据
 
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
-  logo: "I",
-  url: "https://www.iconfont.cn"
+  logo: "W",
+  url: "https://www.w3cways.com/"
 }, {
-  logo: "F",
-  url: "https://figma.com"
+  logo: "D",
+  url: "https://devdocs.io/"
+}, {
+  logo: "J",
+  url: "https://juejin.im/"
+}, {
+  logo: "Z",
+  url: "https://www.zhangxinxu.com/wordpress/"
+}, {
+  logo: "V",
+  url: "https://vuejs.org/"
+}, {
+  logo: "A",
+  url: "https://ant.design/index-cn"
+}, {
+  logo: "H",
+  url: "https://www.html.cn/"
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
