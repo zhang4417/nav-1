@@ -1,4 +1,3 @@
-console.log($)
 const $lastLi = $('.siteList').find('li.last')
 const $addSite = $('.addSite')
 const x = localStorage.getItem('x')//提取数据
@@ -38,15 +37,14 @@ const render = () => {
 render()
 
 $addSite.on('click', () => {
-    let url = window.prompt('请输入要添加的网址！')//添加提示窗口
+    let url = window.prompt('请输入要添加的网址！默认是https://')//添加提示窗口
+    if (url === null) { return }
     if (url.indexOf('http') !== 0) {
         url = "https://" + url
     }
     hashMap.push({ logo: simplifyUrl(url)[0].toUpperCase(), url: url })
     render()
 })
-
-console.log(hashMap)
 
 window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)
